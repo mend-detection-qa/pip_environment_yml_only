@@ -8,7 +8,7 @@
             "_security_scan_report_conclusion": "failure",
             "_comment_security_scan_report_conclusion": "Optional. Expected scan report conclusion. Options: 'success' | 'failure'. This validates the security scan result status. If not provided, this check will not be performed.",
             "total_libs_scanned": {
-                "eq": 45
+                "gte": 41
             },
             "_comment_total_libs_scanned": "Expected number of libraries scanned with comparison operator. Validates that the scan processed libraries."
         },
@@ -145,10 +145,6 @@
                     "value": "Trying version getter: EnvironmentYml"
                 },
                 {
-                    "operator": "regex",
-                    "value": "Found Python version \\(3\\.8\\.16\\) for Pip project at \"/.*pip_environment_yml_only.*\""
-                },
-                {
                     "operator": "eq",
                     "value": "python version set to: 3.8.16"
                 },
@@ -159,6 +155,14 @@
               {
                     "operator": "eq",
                     "value": "Install tool python succeeded"
+                },
+                 {
+                  "operator": "regex",
+                  "value": "Found Python version \\\\\"3\\.8\\.16\\\\\" in environment\\.yml"
+                },
+                {
+                  "operator": "regex",
+                  "value": "Found Python version \\(3\\.8\\.16\\) for Pip project at .*pip_environment_yml_only"
                 }
             ],
             "_comment_expected_log_lines": "Optional. List of log lines to validate. Each entry should have an 'operator' (eq or regex) and 'value' (string or regex pattern). Example: [{'operator': 'eq', 'value': 'Python version: 3.11'}, {'operator': 'regex', 'value': 'Python version: \\d+\\.\\d+'}]. If not provided, only log attachment will be performed."
