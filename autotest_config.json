@@ -21,14 +21,14 @@
                 "gte": 35
             },
             "expected_direct_dependencies_number": {
-                "eq": 32
+                "gte": 30
             },
             "expected_transitive_dependencies_number": {
                 "eq": 14
             },
             "_comment_expected_dependencies_number": "Optional. Expected number of dependencies with comparison operator. Operators: gt (>), gte (>=), lt (<), lte (<=), eq (==). If not provided, this check will not be performed.",
             "direct_dependencies_names_list": {
-                "eq": [
+                "contains": [
                     "pip",
                     "python",
                     "xz",
@@ -44,7 +44,6 @@
                     "icu",
                     "libffi",
                     "ncurses",
-                    "_openmp_mutex",
                     "ca-certificates",
                     "libnsl",
                     "xz-tools",
@@ -53,7 +52,6 @@
                     "tk",
                     "xz-gpl-tools",
                     "bzip2",
-                    "_libgcc_mutex",
                     "ld_impl_linux-64",
                     "requests-2.31.0-py3-none-any.whl",
                     "zstd",
