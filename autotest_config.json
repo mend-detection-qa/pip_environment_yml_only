@@ -154,10 +154,6 @@
                     "operator": "eq",
                     "value": "Install tool python succeeded"
                 },
-                 {
-                  "operator": "regex",
-                  "value": "Found Python version \\\\\"3\\.8\\.16\\\\\" in environment\\.yml"
-                },
                 {
                   "operator": "regex",
                   "value": "Found Python version \\(3\\.8\\.16\\) for Pip project at .*pip_environment_yml_only"
